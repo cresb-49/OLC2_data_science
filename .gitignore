@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 # Archivos generados por las librerias 
-.png
+*.png

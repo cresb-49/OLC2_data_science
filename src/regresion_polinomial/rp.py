@@ -64,7 +64,7 @@ plt.ylim(0,1000)
 
 tittle = 'Degree = {}; RMSE = {}; R2 ={}'.format(nb_degree,round(rmse,2),round(r2,2))
 
-plt.title('Polynomial Linear Regression using scikit-learn and python 3 \n',fontsize=10)
+plt.title('Polynomial Linear Regression using scikit-learn and python 3 \n'+tittle,fontsize=10)
 plt.xlabel('x')
 plt.ylabel('y')
 

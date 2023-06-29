@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import linear_model
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error, r2_score, explained_variance_score
 
 data = pd.read_csv('src/Tests/pred.csv')
 x = np.asarray(data['NO']).reshape(-1, 1)
@@ -18,8 +18,10 @@ y_pred = regr.predict(x)
 # Datos de rendimiento de la regrecion
 rmse = np.sqrt(mean_squared_error(y, y_pred))
 r2 = r2_score(y, y_pred)
+variance = explained_variance_score(y, y_pred)
 print('RMSE: ', rmse)
 print('R2: ', r2)
+print('VARIANCE: ', variance)
 # Prediccion de un nuevo valor
 correlative = 30
 prediction_correlative = regr.predict([[correlative]])

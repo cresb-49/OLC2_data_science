@@ -3,8 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn import linear_model
 
-df = pd.read_csv("src/regrecion_lineal_simple/pa.csv")
-
+df = pd.read_csv("src/regresion_lineal_simple/pa.csv")
 x = np.asarray(df['ciclomes']).reshape(-1,1)
 y = df['pa']
 
